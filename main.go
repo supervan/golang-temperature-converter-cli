@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"strings"
 )
 
 var originUnit string
@@ -18,7 +19,7 @@ var errReadingInput = errors.New("Error reading input")
 
 func main() {
 
-	if(os.Args.len <> 2){
+	if len(os.Args) != 2 {
 		printError(errInvalidArguments)
 	}
 	originUnit = strings.ToUpper(os.Args[1])
